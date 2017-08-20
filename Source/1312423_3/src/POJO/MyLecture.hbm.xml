@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/HibernateMapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class
+	name="POJO.MyLecture" table="LECTURE">
+	
+		<id name="ID" type="int">
+			<column name="ID" not-null="true"/>
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="NAME" type="string">
+			<column length="50" name="NAME" not-null="true"/>
+		</property>
+
+		<property name="PASS" type="string">
+			<column name="PASS" not-null="true"/>
+		</property>
+		
+		<property name="CLASS" type="string">
+			<column name="CLASS"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>

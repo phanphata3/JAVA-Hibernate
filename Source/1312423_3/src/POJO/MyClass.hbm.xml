@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/HibernateMapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class
+	name="POJO.MyClass" table="CLASS">
+	
+		<id name="ID" type="int">
+			<column length="7" name="ID"/>
+			<generator class="assigned"/>
+		</id>
+		
+		<property name="NAME" type="string">
+			<column length="50" name="NAME" not-null="true"/>
+		</property>
+
+		<property name="ROOM" type="string">
+			<column length="50" name="ROOM" not-null="true"/>
+		</property>
+		
+		<property name="DATEBEGIN" type="date">
+			<column length="10" name="DATEBEGIN" not-null="true"/>
+		</property>
+		
+		<property name="DATEEND" type="date">
+			<column length="10" name="DATEEND" not-null="true"/>
+		</property>
+		
+		<property name="HOURBEGIN" type="time">
+			<column name="HOURBEGIN" not-null="true"/>
+		</property>
+		
+		<property name="HOUREND" type="time">
+			<column name="HOUREND" not-null="true"/>
+		</property>
+		
+		<property name="DAYMONTH" type="string">
+			<column name="DAYMONTH" not-null="true"/>
+		</property>
+		
+	</class>
+</hibernate-mapping>
